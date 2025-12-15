@@ -1,6 +1,6 @@
 Parse ← (\+ - 1 × 2 ⌕ @()
-Part₁ ← (⊣ Parse)            # Part 1: 232
-Part₂ ← (+ 1 ⊢ ⊚ ≡=¯1 Parse) # Part 2: 1783
+Part₁ ← (⊣ Parse)            
+Part₂ ← (+ 1 ⊢ ⊚ ≡=¯1 Parse)
 
 ⍤ "Test Part 1.1" = 0 Part₁ "(())"
 ⍤ "Test Part 1.2" = 0 Part₁ "()()"
