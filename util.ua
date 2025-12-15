@@ -1,6 +1,8 @@
-┌─╴Util ~ ReadLines Split
+┌─╴Util ~ ReadFile ReadLines Split
   Split     ← (⊜□ ⊸≠ ⊙)
-  ReadLines ← (Split "\n" &fras)
+  ReadFile  ← (&fras)
+  ReadLines ← (Split "\n" ReadFile)
 └─╴
+ReadFile  ← Util~ReadFile
 ReadLines ← Util~ReadLines
 Split     ← Util~Split
