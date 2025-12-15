@@ -3,11 +3,11 @@
 
 # convert one of {>, <, v, ^} to a cardinal direction represented as a complex number
 DirToComplex ← (
-  ⊙ℂ ⟜0 ⤙= @>
-  ⊙ℂ ⟜0 ⤙(¯=) @<
-  ⊙˜ℂ ⟜0 ⤙= @^
-  ˜ℂ 0 (¯=) @v
-  /+ ⊂ ⊂ ⊂
+  ⊙ℂ⟜0⤙=@>
+  ⊙ℂ⟜0⤙(¯=)@<
+  ⊙˜ℂ⟜0⤙=@^
+  ˜ℂ0(¯=)@v
+  +++
 )
 
 ⍤ "Test DirToComplex: right >" = ℂ 0 1 DirToComplex @>
