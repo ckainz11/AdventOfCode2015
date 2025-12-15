@@ -1,6 +1,7 @@
 ~ "../util.ua"
   ~ ReadFile
 
+# convert one of {>, <, v, ^} to a cardinal direction represented as a complex number
 DirToComplex ← (
   ⊙ℂ ⟜0 ⤙= @>
   ⊙ℂ ⟜0 ⤙(¯=) @<
