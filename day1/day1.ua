@@ -1,5 +1,5 @@
 Parse ← (\+ - 1 × 2 ⌕ @()
-Part₁ ← (⊣ Parse)            
+Part₁ ← (⊣ Parse)
 Part₂ ← (+ 1 ⊢ ⊚ ≡=¯1 Parse)
 
 ⍤ "Test Part 1.1" = 0 Part₁ "(())"
