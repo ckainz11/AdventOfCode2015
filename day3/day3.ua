@@ -1,5 +1,5 @@
 ~ "../util.ua"
-  ~ ReadFile RunTime
+  ~ FormatTime ReadFile
 
 # convert one of {>, <, v, ^} to a cardinal direction represented as a complex number
 DirToComplex ← (
@@ -31,5 +31,5 @@ Part₂ ← ⊢ △ ◴ ⊂ ∩(\+) ⊏ ⊸OddIndices ⤙⊏ ⊸EvenIndices Pars
 ⍤ "Test Part 2.2" = 3 Part₂ "^>v<"
 ⍤ "Test Part 2.3" = 11 Part₂ "^v^v^v^v^v"
 
-RunTime Part₁ ReadFile "day3/day3.in"
-RunTime Part₂ ReadFile "day3/day3.in"
+FormatTime ⍜nowPart₁ ReadFile "day3/day3.in"
+FormatTime ⍜nowPart₂ ReadFile "day3/day3.in"

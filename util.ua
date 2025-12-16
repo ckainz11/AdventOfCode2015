@@ -1,21 +1,17 @@
-┌─╴Util ~ ReadFile ReadLines RunTime Split
+┌─╴Util ~ FormatTime ReadFile ReadLines Split
   Split     ← (⊜□ ⊸≠ ⊙)
   ReadFile  ← (&fras)
   ReadLines ← (Split "\n" ReadFile)
 
-  RunTimeInS ← (⍜now)
+  GetMicroMilli ← ⍉⊟{"\u03BCs" "ms" "s"}⊂⊂⊸×1000⊸×1000
 
-  GetPicoNanoMicroMilli ← ⍉⊟{"\u03BCs" "ms" "s"}⊂⊂⊸×1000⊸×1000
-
-  FormatTime ← ▽≥1⊸≡(°□⊡1)▽<1000⊸≡(°□⊡1) GetPicoNanoMicroMilli
-
-  # Appends the runtime of a function after the output of the function
-  RunTime ← ⊃⋅∘∘ ↻₁⍣⊢ [□"< 1\u03BCs"] FormatTime RunTimeInS
+  FilterTime ← ▽≥1⊸≡(°□⊡1)▽<1000⊸≡(°□⊡1) GetMicroMilli
+  FormatTime ← ⊃⋅∘∘ ↻₁⍣⊢ [□"> 1000s"] FilterTime
 └─╴
 ReadFile  ← Util~ReadFile
 ReadLines ← Util~ReadLines
 
 Split ← Util~Split
 
-# Appends the runtime of a function after the output of the function
-RunTime ← Util~RunTime
+# Formats the specified seconds as either s, milli or micro
+FormatTime ← Util~FormatTime

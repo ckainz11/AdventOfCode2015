@@ -1,7 +1,7 @@
-~ "../util" ~ ReadFile RunTime
-Parse ← (\+ - 1 × 2 ⌕ @()
+~ "../util" ~ FormatTime ReadFile
+Parse ← (\+ -1×2 =@()
 Part₁ ← (⊣ Parse)
-Part₂ ← (+ 1 ⊢ ⊚ ≡=¯1 Parse)
+Part₂ ← (+1⊢⊚=¯1 Parse)
 
 ⍤ "Test Part 1.1" = 0 Part₁ "(())"
 ⍤ "Test Part 1.2" = 0 Part₁ "()()"
@@ -15,8 +15,8 @@ Part₂ ← (+ 1 ⊢ ⊚ ≡=¯1 Parse)
 ⍤ "Test Part 2.1" = 1 Part₂ ")"
 ⍤ "Test Part 2.2" = 5 Part₂ "()())"
 
-RunTime Part₁ &fras "day1/day1.in"
-RunTime Part₂ &fras "day1/day1.in"
+FormatTime ⍜nowPart₁ &fras "day1/day1.in"
+FormatTime ⍜nowPart₂ &fras "day1/day1.in"
 
 ˙⍤ = 232 Part₁ &fras "day1/day1.in"
 ˙⍤ = 1783 Part₂ &fras "day1/day1.in"
