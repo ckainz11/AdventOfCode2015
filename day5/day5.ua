@@ -14,8 +14,8 @@ IsNiceString₂ ← = 2 + ContainsTwoPairs⟜ContainsRepeatBetween
 Part₁ ← /+ ≡(◇IsNiceString₁)
 Part₂ ← /+ ≡(◇IsNiceString₂)
 
-FormatTime⍜now(Part₁) ReadLines "day5/day5.in"
-FormatTime⍜now(Part₂) ReadLines "day5/day5.in"
+FormatTime ⍜nowPart₁ ReadLines "day5/day5.in"
+FormatTime ⍜nowPart₂ ReadLines "day5/day5.in"
 
 # Tests
 
