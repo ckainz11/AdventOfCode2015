@@ -3,9 +3,9 @@
   ReadFile  ← (&fras)
   ReadLines ← (Split "\n" ReadFile)
 
-  GetMicroMilli ← ⍉⊟{"\u03BCs" "ms" "s"}⊂⊂⊸×1000⊸×1000
+  GetMicroMilli ← ⍉⊟{"\u03BCs" "ms" "s"}⁅⊂⊂⊸×₁₀₀₀⊸×₁₀₀₀
 
-  FilterTime ← ▽≥1⊸≡(°□⊡1)▽<1000⊸≡(°□⊡1) GetMicroMilli
+  FilterTime ← ▽≥₁⊸≡(°□⊡₁)▽<₁₀₀₀⊸≡(°□⊡₁) GetMicroMilli
   FormatTime ← ⊃⋅∘∘ ↻₁⍣⊢ [□"> 1000s"] FilterTime
 └─╴
 ReadFile  ← Util~ReadFile
