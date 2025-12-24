@@ -1,4 +1,4 @@
-~ "../util" ~ FormatTime ReadFile
+~ "../util" ~ MeasureTime! ReadFile
 Parse ← (\+ -1×2 =@()
 Part₁ ← (⊣ Parse)
 Part₂ ← (+1⊢⊚=¯1 Parse)
@@ -15,8 +15,8 @@ Part₂ ← (+1⊢⊚=¯1 Parse)
 ⍤ "Test Part 2.1" = 1 Part₂ ")"
 ⍤ "Test Part 2.2" = 5 Part₂ "()())"
 
-FormatTime ⍜nowPart₁ &fras "day1/day1.in"
-FormatTime ⍜nowPart₂ &fras "day1/day1.in"
+MeasureTime!Part₁ &fras "day1/day1.in"
+MeasureTime!Part₂ &fras "day1/day1.in"
 
 ˙⍤ = 232 Part₁ &fras "day1/day1.in"
 ˙⍤ = 1783 Part₂ &fras "day1/day1.in"

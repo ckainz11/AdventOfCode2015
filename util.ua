@@ -14,4 +14,5 @@ ReadLines ← Util~ReadLines
 Split ← Util~Split
 
 # Formats the specified seconds as either s, milli or micro
-FormatTime ← Util~FormatTime
+FormatTime   ← Util~FormatTime
+MeasureTime! ← FormatTime⍜now^

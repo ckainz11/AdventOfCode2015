@@ -1,5 +1,4 @@
-~ "../util.ua"
-  ~ FormatTime ReadLines Split
+~ "../util.ua" ~ MeasureTime! ReadLines Split
 
 Parse ← ≡(≡⋕ Split "x" °□)
 
@@ -12,8 +11,8 @@ SmallestPerimeter ← (/+ ≡(×2) ↙ 2 ⍆)
 Part₁ ← /+ + ≡Slack ⟜≡(Area) Parse
 Part₂ ← /+ + ≡Volume⟜≡(SmallestPerimeter) Parse
 
-FormatTime ⍜nowPart₁ ReadLines "day2/day2.in"
-FormatTime ⍜nowPart₂ ReadLines "day2/day2.in"
+MeasureTime!Part₁ ReadLines "day2/day2.in"
+MeasureTime!Part₂ ReadLines "day2/day2.in"
 
 ⍤ "Test Part1.1: " = 58 Part₁ {"2x3x4"}
 ⍤ "Test Part1.2: " = 43 Part₁ {"1x1x10"}

@@ -1,5 +1,4 @@
-~ "../util"
-  ~ FormatTime ReadLines
+~ "../util" ~ MeasureTime! ReadLines
 
 ContainsThreeVowels  ← (> 2 /+ ∊ "aeiou")
 ContainsDoubleLetter ← (≥ 1 /+≡(= ⊡1⤙⊡0)⧈∘ 2)
@@ -14,8 +13,8 @@ IsNiceString₂ ← = 2 + ContainsTwoPairs⟜ContainsRepeatBetween
 Part₁ ← /+ ≡(◇IsNiceString₁)
 Part₂ ← /+ ≡(◇IsNiceString₂)
 
-FormatTime ⍜nowPart₁ ReadLines "day5/day5.in"
-FormatTime ⍜nowPart₂ ReadLines "day5/day5.in"
+MeasureTime!Part₁ ReadLines "day5/day5.in"
+MeasureTime!Part₂ ReadLines "day5/day5.in"
 
 # Tests
 
